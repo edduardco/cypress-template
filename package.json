@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "combine-reports": "mochawesome-merge ./cypress/reports/mocha/*.json > ./mochareports/report.json",
+        "generate-report": "marge mochareports/*.json --reportDir mochawesome --assetsDir mochawesome/assets --reportPageTitle index.html"
+    },
+    "devDependencies": {
+        "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+        "cypress": "^10.9.0",
+        "cypress-mochawesome-reporter": "^3.2.3",
+        "esbuild": "^0.15.10"
+    },
+    "dependencies": {
+        "@badeball/cypress-cucumber-preprocessor": "^13.0.2"
+    }
+}

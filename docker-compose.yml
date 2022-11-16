@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  e2e:
+    image: cypress
+    build: .
+    container_name: cypress
+    # depends_on:
+    #   - web
+    # environment:
+    #   - CYPRESS_baseUrl=http://web
+    command: npx cypress run
+    volumes:
+      - ./cypress:/app/cypress
+    #  - ./cypress.config.js:/app/cypress.config.js
